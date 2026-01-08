@@ -30,7 +30,7 @@ sys.path.insert(0, str(SCRIPT_DIR))
 # Set up minimal environment
 os.environ.setdefault("OUT_FILE", "contributors.json")
 os.environ.setdefault("INCLUDE_ANONYMOUS", "true")
-os.environ.setdefault("SKIP_ARCHIVED", "true")
+os.environ.setdefault("SKIP_ARCHIVED", "false")
 os.environ.setdefault("PER_REPO_DELAY_MS", "150")
 
 def main():
@@ -79,6 +79,11 @@ def main():
             targets = ""  # allow downstream auto-detect based on GITHUB_REPOSITORY
             if not repo_ctx:
                 print("⚠️  No targets provided and GITHUB_REPOSITORY is empty; auto-detect may fail.")
+    
+    # Apply smart defaults for Sunrisepeak/all-contributors
+    if targets == "Sunrisepeak/all-contributors":
+        targets = "Sunrisepeak/* mcpp-community/* d2learn/*"
+        print("🔧 Using default targets for Sunrisepeak/all-contributors")
 
     os.environ["TARGETS"] = targets
 

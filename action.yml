@@ -22,7 +22,7 @@ inputs:
   skip_archived:
     description: "Skip archived repos"
     required: false
-    default: "true"
+    default: "false"
   per_repo_delay_ms:
     description: "Delay between repos to reduce rate limiting"
     required: false

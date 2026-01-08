@@ -48,18 +48,22 @@ def _download_avatar(url: str) -> Image.Image:
 
 
 def _make_circular(img: Image.Image, size: int) -> Image.Image:
-    """Convert image to circular avatar"""
-    # Resize to size x size
-    img = img.resize((size, size), Image.Resampling.LANCZOS)
+    """Convert image to circular avatar with 3x anti-aliasing"""
+    # Render at 3x resolution for smoother edges
+    hi_size = size * 3
+    img = img.resize((hi_size, hi_size), Image.Resampling.LANCZOS)
     
-    # Create circular mask
-    mask = Image.new("L", (size, size), 0)
+    # Create circular mask at high resolution
+    mask = Image.new("L", (hi_size, hi_size), 0)
     mask_draw = ImageDraw.Draw(mask)
-    mask_draw.ellipse([(0, 0), (size, size)], fill=255)
+    mask_draw.ellipse([(0, 0), (hi_size, hi_size)], fill=255)
     
-    # Create output with alpha channel
-    output = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    # Create output with alpha channel at high resolution
+    output = Image.new("RGBA", (hi_size, hi_size), (0, 0, 0, 0))
     output.paste(img.convert("RGBA"), (0, 0), mask)
+    
+    # Downsample to final size for smooth anti-aliased result
+    output = output.resize((size, size), Image.Resampling.LANCZOS)
     return output
 
 
@@ -115,7 +119,7 @@ def _render_png(contributors: List[Dict], out_path: str):
         try:
             # Download and process avatar
             avatar = _download_avatar(avatar_url)
-            # Convert to circular
+            # Convert to circular with 3x anti-aliasing (returns avatar_size)
             avatar = _make_circular(avatar, avatar_size)
             # Paste onto main image with alpha channel
             img.paste(avatar, (x, y), avatar)
