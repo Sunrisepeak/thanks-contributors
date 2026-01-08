@@ -1,0 +1,82 @@
+name: "All Contributors X"
+description: "Collect contributors across public repos and generate contributors.json, contributors.html, contributors.png"
+author: "Sunrisepeak <speakshen@163.com>"
+
+branding:
+  icon: "users"
+  color: "orange"
+
+inputs:
+  targets:
+    description: "Targets to scan: owner/* (all repos) or owner/repo. Leave empty to auto-detect current owner."
+    required: false
+    default: ""
+  token:
+    description: "GitHub token. Defaults to GITHUB_TOKEN if not provided. PAT recommended for large orgs."
+    required: false
+    default: ${{ github.token }}
+  out_file:
+    description: "Output JSON file path in the caller repo"
+    required: false
+    default: "contributors.json"
+  include_anonymous:
+    description: "Include anonymous contributors (no login)"
+    required: false
+    default: "true"
+  skip_archived:
+    description: "Skip archived repos"
+    required: false
+    default: "true"
+  per_repo_delay_ms:
+    description: "Delay between repos to reduce rate limiting"
+    required: false
+    default: "150"
+
+outputs:
+  updated:
+    description: "true if output file changed vs previous run (best-effort, requires checkout in caller)"
+    value: ${{ steps.detect.outputs.updated }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Python dependencies
+      shell: bash
+      run: |
+        cd "${{ github.action_path }}"
+        if [ -f requirements.txt ]; then
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet -r requirements.txt
+        fi
+
+    - name: Collect contributors
+      shell: bash
+      env:
+        TARGETS: ${{ inputs.targets }}
+        GH_TOKEN: ${{ inputs.token }}
+        OUT_FILE: ${{ inputs.out_file }}
+        INCLUDE_ANONYMOUS: ${{ inputs.include_anonymous }}
+        SKIP_ARCHIVED: ${{ inputs.skip_archived }}
+        PER_REPO_DELAY_MS: ${{ inputs.per_repo_delay_ms }}
+      run: |
+        cd "${{ github.action_path }}"
+        if [ -n "${TARGETS}" ]; then
+          echo "Using user-provided targets: ${TARGETS}"
+          export TARGETS
+        else
+          echo "No targets provided; main.py will auto-detect or apply repo defaults"
+        fi
+        python main.py
+
+    - name: Detect changes (best-effort)
+      id: detect
+      shell: bash
+      env:
+        OUT_FILE: ${{ inputs.out_file }}
+      run: |
+        if git status --porcelain -- "${OUT_FILE}" contributors.png contributors.html | grep .; then
+        # Check all generated files: JSON, PNG, HTML
+          echo "updated=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "updated=false" >> "$GITHUB_OUTPUT"
+        fi
