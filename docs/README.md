@@ -139,7 +139,7 @@ python main.py --token ghp_xxx 'org/*' user/repo
 
 ### contributors.md
 
-Markdown 格式的贡献者表格，头像（50×50）+ 名字，每行 10 个贡献者。
+Markdown 格式的贡献者表格，头像（50×50）+ 名字，每行 8 个贡献者。
 
 ---
 

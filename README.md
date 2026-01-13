@@ -18,6 +18,12 @@
 - 支持`Github Pages`自动部署&同步更新
 - 支持`贡献者图片墙`和`Markdown贡献者列表`两种格式
 
+## 应用场景 & 案例
+
+- `个人主页` : 显示个人维护的所有仓库和组织 & 案例的贡献者 -> [Sunrisepeak](https://github.com/Sunrisepeak)
+- `组织主页` : 显示组织下所有仓库的贡献者 -> [mcpp-community](https://github.com/mcpp-community)
+- `单个或多个仓库` : 显示单个仓库的贡献者
+
 ## 快速开始
 
 ## 方式一: 直接使用项目模板
@@ -59,6 +65,16 @@ jobs:
 
       - name: Collect contributors
         uses: Sunrisepeak/thanks-contributors@0.0.3
+```
+
+**指定多个仓库或组织**
+
+```yaml
+      #...
+      - name: Collect contributors
+        uses: Sunrisepeak/thanks-contributors@0.0.3
+        with:
+            targets: 'Sunrisepeak/* d2learn/* mcpp-community/d2mcpp'
 ```
 
 > [!CAUTION]
