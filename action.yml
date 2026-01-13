@@ -9,6 +9,8 @@ branding:
 permissions:
   # For Auto Commit
   contents: write
+  # For PR creation
+  pull-requests: write
   # For GitHub Pages deployment
   pages: write
   id-token: write
@@ -42,6 +44,18 @@ inputs:
     description: "Automatically commit and push changes to contributors files"
     required: false
     default: "true"
+  pr_branch_name:
+    description: "Branch name for PR when auto_commit is false"
+    required: false
+    default: "thanks-contributors/update"
+  pr_title:
+    description: "PR title when auto_commit is false"
+    required: false
+    default: "chore: update contributors"
+  base_branch:
+    description: "Target base branch for PR (defaults to repo default branch)"
+    required: false
+    default: ""
   deploy_to_pages:
     description: "Deploy contributors files to GitHub Pages"
     required: false
@@ -79,6 +93,9 @@ runs:
         PER_REPO_DELAY_MS: ${{ inputs.per_repo_delay_ms }}
         OUTPUT_DIR: ${{ inputs.output_dir }}
         AUTO_COMMIT: ${{ inputs.auto_commit }}
+        PR_BRANCH_NAME: ${{ inputs.pr_branch_name }}
+        PR_TITLE: ${{ inputs.pr_title }}
+        BASE_BRANCH: ${{ inputs.base_branch }}
         README_PATH: ${{ inputs.readme_path }}
       run: |
         cd "${{ github.action_path }}"

@@ -122,7 +122,7 @@ def main():
             size = html_file.stat().st_size
             print(f"   🌐 {html_file} ({size} bytes)")
 
-        from git_changes import auto_commit, write_github_output
+        from git import auto_commit, create_or_update_pr, write_github_output
         
         generated_files = list(get_tracked_files())
         repo_root = str(GITHUB_WORKSPACE or REPO_ROOT)
@@ -134,20 +134,32 @@ def main():
         git_user_email = os.environ.get(
             "GIT_AUTHOR_EMAIL", "41898282+github-actions[bot]@users.noreply.github.com"
         )
+        pr_branch_name = os.environ.get("PR_BRANCH_NAME", "thanks-contributors/update")
+        pr_title = os.environ.get("PR_TITLE", "chore: update contributors")
 
-        if auto_commit_enabled and changed:
-            auto_commit(
-                generated_files,
-                message=commit_message,
-                user_name=git_user_name,
-                user_email=git_user_email,
-                cwd=repo_root,
-            )
-        else:
-            if not changed:
-                print("ℹ️  No changes detected; skipping git push.")
+        if changed:
+            if auto_commit_enabled:
+                auto_commit(
+                    generated_files,
+                    message=commit_message,
+                    user_name=git_user_name,
+                    user_email=git_user_email,
+                    cwd=repo_root,
+                )
             else:
-                print("ℹ️  Auto-commit disabled; skipping git push.")
+                # Create or update PR instead of auto-commit
+                print("📝 Creating/updating PR instead of auto-commit...")
+                create_or_update_pr(
+                    files=generated_files,
+                    branch_name=pr_branch_name,
+                    title=pr_title,
+                    message=commit_message,
+                    user_name=git_user_name,
+                    user_email=git_user_email,
+                    cwd=repo_root,
+                )
+        else:
+            print("ℹ️  No changes detected; skipping git push.")
             
     except KeyboardInterrupt:
         print("\n\n⚠️  Interrupted by user")
