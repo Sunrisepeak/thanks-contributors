@@ -12,6 +12,7 @@
 - **自动 README 更新**：自动在 README 中插入贡献者表格，支持自定义目标文件
 - **跨仓库去重**：汇总贡献者信息并按贡献次数排序
 - **智能处理**：自动跳过 fork 和归档仓库，速率限制智能延迟
+- **自动创建/更新 PR**：当 `auto_commit=false` 时，自动创建 PR；若存在未合并的自动 PR，则在原 PR 上更新，避免重复创建
 
 ---
 
@@ -56,6 +57,25 @@ jobs:
           deploy_to_pages: 'false'
 ```
 
+#### 创建/更新 PR 模式（当 `auto_commit` 为 `false`）
+
+```yaml
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect contributors and open/update PR
+        uses: Sunrisepeak/all-contributors@main
+        with:
+          targets: 'org/*'
+          auto_commit: 'false'
+```
+
 ### 本地命令行方式
 
 ```bash
@@ -94,8 +114,11 @@ python main.py --token ghp_xxx 'org/*' user/repo
 | `skip_archived` | `false` | 跳过已归档仓库 |
 | `per_repo_delay_ms` | `150` | 仓库间延迟（毫秒） |
 | `auto_commit` | `true` | 自动提交更改 |
+| `pr_branch_name` | `thanks-contributors/update` | 当 `auto_commit=false` 时用于 PR 的分支名 |
+| `pr_title` | `chore: update contributors` | 当 `auto_commit=false` 时用于 PR 的标题 |
 | `readme_path` | `README.md` | README 文件路径（相对路径） |
 | `deploy_to_pages` | `false` | 部署到 GitHub Pages |
+| `base_branch` | 空（自动） | PR 的目标基准分支；留空时自动解析（`BASE_BRANCH`→`GITHUB_BASE_REF`→仓库默认分支→`main`） |
 
 ### 环境变量（本地运行）
 
@@ -108,6 +131,9 @@ python main.py --token ghp_xxx 'org/*' user/repo
 | `INCLUDE_ANONYMOUS` | 包含匿名贡献者 |
 | `SKIP_ARCHIVED` | 跳过归档仓库 |
 | `PER_REPO_DELAY_MS` | 仓库间延迟 |
+| `PR_BRANCH_NAME` | 当 `auto_commit=false` 时使用的 PR 分支名 |
+| `PR_TITLE` | 当 `auto_commit=false` 时使用的 PR 标题 |
+| `BASE_BRANCH` | 显式指定 PR 的基准分支（优先级最高） |
 
 ---
 
@@ -177,6 +203,10 @@ Markdown 格式的贡献者表格，头像（50×50）+ 名字，每行 8 个贡
 - **公开仓库**：使用 `${{ github.token }}` 通常足够
 - **私有仓库**：需要有 `repo` 权限的 Personal Access Token (PAT)
 - **大型组织**：使用 PAT 获得更高的速率限制，建议调整 `per_repo_delay_ms`
+- **创建/更新 PR 权限**：调用工作流需授予 `pull-requests: write` 和 `contents: write`；本 Action 已在 `action.yml` 中声明 `pull-requests: write`。
+- **仓库规则（强制签名等）**：若仓库启用“必须签名提交”等规则，Actions 产生的未签名提交可能被拒绝；配置Github Action允许创建PR 或 使用 GitHub App/PAT 具备满足规则的签名能力
+  - `Org/Repo -> Setting -> Actions -> Genenral -> Workflow permissions -> Allow GitHub Actions to create and approve pull requests`
+
 
 ---
 
