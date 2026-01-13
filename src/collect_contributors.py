@@ -20,6 +20,9 @@ TOKEN = os.environ.get("GH_TOKEN")
 INCLUDE_ANONYMOUS = (os.environ.get("INCLUDE_ANONYMOUS", "true").lower() == "true")
 SKIP_ARCHIVED = (os.environ.get("SKIP_ARCHIVED", "true").lower() == "true")
 PER_REPO_DELAY_MS = int(os.environ.get("PER_REPO_DELAY_MS", "150"))
+EXCLUDE_LOGINS = set(
+    s.strip() for s in os.environ.get("EXCLUDE_LOGINS", "github-actions[bot]").split() if s.strip()
+)
 
 if not TOKEN:
     raise SystemExit("Missing env GH_TOKEN")
@@ -270,6 +273,9 @@ def main():
 
         for c in contributors:
             login = c.get("login")
+            # Skip excluded bot accounts
+            if login and login in EXCLUDE_LOGINS:
+                continue
             if not login and not INCLUDE_ANONYMOUS:
                 continue
 
