@@ -1,10 +1,17 @@
-name: "All Contributors X"
-description: "Collect contributors across public repos and generate contributors.json, contributors.html, contributors.png"
+name: "thanks-contributors"
+description: "Collect and showcase contributors - support multiple repos or organizations"
 author: "Sunrisepeak <speakshen@163.com>"
 
 branding:
   icon: "users"
   color: "orange"
+
+permissions:
+  # For Auto Commit
+  contents: write
+  # For GitHub Pages deployment
+  pages: write
+  id-token: write
 
 inputs:
   targets:
@@ -27,15 +34,27 @@ inputs:
     description: "Delay between repos to reduce rate limiting"
     required: false
     default: "150"
+  output_dir:
+    description: "Directory (relative to repo root) where contributors.* files are written"
+    required: false
+    default: ".thanks-contributors"
   auto_commit:
     description: "Automatically commit and push changes to contributors files"
     required: false
     default: "true"
+  deploy_to_pages:
+    description: "Deploy contributors files to GitHub Pages"
+    required: false
+    default: "false"
+  readme_path:
+    description: "Path to README file (relative to repo root) to update with contributors"
+    required: false
+    default: "README.md"
 
 outputs:
   updated:
     description: "true if output file changed vs previous run (best-effort, requires checkout in caller)"
-    value: ${{ steps.detect.outputs.updated }}
+    value: ${{ steps.collect.outputs.updated }}
 
 runs:
   using: "composite"
@@ -50,6 +69,7 @@ runs:
         fi
 
     - name: Collect contributors
+      id: collect
       shell: bash
       env:
         TARGETS: ${{ inputs.targets }}
@@ -57,26 +77,35 @@ runs:
         INCLUDE_ANONYMOUS: ${{ inputs.include_anonymous }}
         SKIP_ARCHIVED: ${{ inputs.skip_archived }}
         PER_REPO_DELAY_MS: ${{ inputs.per_repo_delay_ms }}
+        OUTPUT_DIR: ${{ inputs.output_dir }}
+        AUTO_COMMIT: ${{ inputs.auto_commit }}
+        README_PATH: ${{ inputs.readme_path }}
       run: |
         cd "${{ github.action_path }}"
         python main.py
 
-    - name: Detect changes (best-effort)
-      id: detect
-      shell: bash
-      run: |
-        if git status --porcelain -- contributors.json contributors.png contributors.html | grep .; then
-          echo "updated=true" >> "$GITHUB_OUTPUT"
-        else
-          echo "updated=false" >> "$GITHUB_OUTPUT"
-        fi
+    - name: Setup Pages
+      if: ${{ inputs.deploy_to_pages == 'true' }}
+      uses: actions/configure-pages@v4
 
-    - name: Auto-commit changes
-      if: inputs.auto_commit == 'true' && steps.detect.outputs.updated == 'true'
+    - name: Create public directory for GitHub Pages
+      if: ${{ inputs.deploy_to_pages == 'true' }}
       shell: bash
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add contributors.json contributors.png contributors.html
-        git commit -m "chore: update contributors"
-        git push
+        OUTPUT_DIR="${{ inputs.output_dir }}"
+        mkdir -p public
+        [ -f "$OUTPUT_DIR/contributors.html" ] && cp "$OUTPUT_DIR/contributors.html" public/index.html
+        [ -f "$OUTPUT_DIR/contributors.json" ] && cp "$OUTPUT_DIR/contributors.json" public/contributors.json
+        [ -f "$OUTPUT_DIR/contributors.png" ] && cp "$OUTPUT_DIR/contributors.png" public/contributors.png
+        ls -la public/ || echo "public directory is empty"
+
+    - name: Upload artifact to Pages
+      if: ${{ inputs.deploy_to_pages == 'true' }}
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'public'
+
+    - name: Deploy to GitHub Pages
+      if: ${{ inputs.deploy_to_pages == 'true' }}
+      id: deployment
+      uses: actions/deploy-pages@v4

@@ -1,0 +1,3 @@
+## Thanks, Contributors!
+
+{items}

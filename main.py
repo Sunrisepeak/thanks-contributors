@@ -23,12 +23,18 @@ import sys
 import argparse
 from pathlib import Path
 
-# Add scripts directory to path
-SCRIPT_DIR = Path(__file__).parent / "scripts"
-sys.path.insert(0, str(SCRIPT_DIR))
+# Get GitHub environment variables
+GITHUB_WORKSPACE = os.environ.get("GITHUB_WORKSPACE")
+GITHUB_ACTION_PATH = os.environ.get("GITHUB_ACTION_PATH")
+REPO_ROOT = Path(__file__).parent
+# Add src directory to path
+SRC_DIR = REPO_ROOT / "src"
+sys.path.insert(0, str(SRC_DIR))
+
+from config import get_output_paths, get_tracked_files
 
 # Set up minimal environment
-os.environ.setdefault("OUT_FILE", "contributors.json")
+os.environ.setdefault("OUTPUT_DIR", ".thanks-contributors")
 os.environ.setdefault("INCLUDE_ANONYMOUS", "true")
 os.environ.setdefault("SKIP_ARCHIVED", "false")
 os.environ.setdefault("PER_REPO_DELAY_MS", "150")
@@ -72,18 +78,18 @@ def main():
     elif env_targets:
         targets = env_targets
     else:
-        if repo_ctx == "Sunrisepeak/all-contributors":
+        if repo_ctx == "Sunrisepeak/thanks-contributors":
             targets = "Sunrisepeak/* mcpp-community/* d2learn/*"
-            print("🔧 Using default targets for Sunrisepeak/all-contributors")
+            print("🔧 Using default targets for Sunrisepeak/thanks-contributors")
         else:
             targets = ""  # allow downstream auto-detect based on GITHUB_REPOSITORY
             if not repo_ctx:
                 print("⚠️  No targets provided and GITHUB_REPOSITORY is empty; auto-detect may fail.")
     
-    # Apply smart defaults for Sunrisepeak/all-contributors
-    if targets == "Sunrisepeak/all-contributors":
+    # Apply smart defaults for Sunrisepeak/thanks-contributors
+    if targets == "Sunrisepeak/thanks-contributors":
         targets = "Sunrisepeak/* mcpp-community/* d2learn/*"
-        print("🔧 Using default targets for Sunrisepeak/all-contributors")
+        print("🔧 Using default targets for Sunrisepeak/thanks-contributors")
 
     os.environ["TARGETS"] = targets
 
@@ -94,12 +100,13 @@ def main():
     # Import and run the collector
     try:
         from collect_contributors import main as collect_main
-        collect_main()
+        changed = collect_main()  # Returns True if contributors changed
         
-        # Check if files were generated
-        json_file = Path("contributors.json")
-        png_file = Path("contributors.png")
-        html_file = Path("contributors.html")
+        # Resolve output paths
+        paths = get_output_paths()
+        json_file = paths["json"]
+        png_file = paths["png"]
+        html_file = paths["html"]
         
         print("\n✅ Generation complete!")
         
@@ -114,6 +121,33 @@ def main():
         if html_file.exists():
             size = html_file.stat().st_size
             print(f"   🌐 {html_file} ({size} bytes)")
+
+        from git_changes import auto_commit, write_github_output
+        
+        generated_files = list(get_tracked_files())
+        repo_root = str(GITHUB_WORKSPACE or REPO_ROOT)
+        write_github_output("updated", "true" if changed else "false")
+
+        auto_commit_enabled = os.environ.get("AUTO_COMMIT", "true").lower() == "true"
+        commit_message = os.environ.get("COMMIT_MESSAGE", "chore: update contributors")
+        git_user_name = os.environ.get("GIT_AUTHOR_NAME", "github-actions[bot]")
+        git_user_email = os.environ.get(
+            "GIT_AUTHOR_EMAIL", "41898282+github-actions[bot]@users.noreply.github.com"
+        )
+
+        if auto_commit_enabled and changed:
+            auto_commit(
+                generated_files,
+                message=commit_message,
+                user_name=git_user_name,
+                user_email=git_user_email,
+                cwd=repo_root,
+            )
+        else:
+            if not changed:
+                print("ℹ️  No changes detected; skipping git push.")
+            else:
+                print("ℹ️  Auto-commit disabled; skipping git push.")
             
     except KeyboardInterrupt:
         print("\n\n⚠️  Interrupted by user")

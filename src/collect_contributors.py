@@ -6,14 +6,16 @@ import time
 import urllib.request
 import urllib.parse
 import ssl
+from pathlib import Path
 from datetime import datetime, timezone
+
+from config import get_output_dir, get_output_paths
 
 API = "https://api.github.com"
 
 TARGETS_RAW = os.environ.get("TARGETS", "")
 REPO_CTX = os.environ.get("GITHUB_REPOSITORY")
 TOKEN = os.environ.get("GH_TOKEN")
-OUT_FILE = os.environ.get("OUT_FILE", "contributors.json")
 
 INCLUDE_ANONYMOUS = (os.environ.get("INCLUDE_ANONYMOUS", "true").lower() == "true")
 SKIP_ARCHIVED = (os.environ.get("SKIP_ARCHIVED", "true").lower() == "true")
@@ -118,6 +120,36 @@ def describe_target(t: dict):
     return f"{t['name']}/*"
 
 
+def load_existing_contributors(json_path):
+    """Load contributors from existing JSON file if it exists."""
+    if not json_path.exists():
+        return None
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("contributors", [])
+    except Exception:
+        return None
+
+
+def contributors_changed(json_path, new_contributors_list):
+    """Check if contributors list has changed compared to existing file."""
+    existing = load_existing_contributors(json_path)
+    if existing is None:
+        return True  # File doesn't exist, so it's new
+    
+    # Normalize both lists for comparison
+    existing_set = {(c.get("name"), c.get("email")) for c in existing}
+    new_set = {(c.get("name"), c.get("email")) for c in new_contributors_list}
+    
+    changed = existing_set != new_set
+    if changed:
+        print("Contributors changed (new/updated contributors detected)")
+    else:
+        print("Contributors unchanged (skipping render)")
+    return changed
+
+
 def parse_targets(raw_targets: str, repo_ctx: str):
     tokens = []
     for part in raw_targets.replace(",", " ").split():
@@ -157,6 +189,19 @@ def detect_target_from_repo(repo_ctx: str):
 
 
 def main():
+    # Get output paths (must be done here after environment is fully set up)
+    # config.py handles GITHUB_WORKSPACE prefix automatically
+    output_dir_path = get_output_dir()
+    paths = get_output_paths(output_dir_path)
+    out_json_path = paths["json"]
+    html_out_path = paths["html"]
+    png_out_path = paths["png"]
+    md_out_path = paths["md"]
+    readme_path = paths["readme"]
+    
+    print(f"DEBUG: readme_path = {readme_path}")
+    print(f"DEBUG: readme_path type = {type(readme_path)}")
+    
     targets = parse_targets(TARGETS_RAW, REPO_CTX)
     seen_labels = set()
     target_labels = []
@@ -272,12 +317,6 @@ def main():
             }
         )
 
-    # Generate visual walls
-    try:
-        render_wall(display_contributors, "contributors.html", "contributors.png")
-    except Exception as e:
-        print(f"Warning: failed to render contributors wall: {e}")
-
     # Build final contributors list (deduplicated, sorted by name)
     contributors_list = []
     for v in display_contributors:
@@ -285,18 +324,47 @@ def main():
 
     contributors_list.sort(key=lambda x: (x.get("name") or "").lower())
 
+    # Check if contributors have changed before writing/rendering
+    has_changes = contributors_changed(out_json_path, contributors_list)
+    
     out = {
-        "all-contributors": "1.0.0",
+        "thanks-contributors": "1.0.0",
         "count": len(contributors_list),
         "contributors": contributors_list,
         "details": repo_details,
     }
 
-    ensure_parent_dir(OUT_FILE)
-    with open(OUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
+    # Only write and render if there are changes
+    if has_changes:
+        # Ensure output directories exist
+        ensure_parent_dir(str(out_json_path))
+        ensure_parent_dir(str(html_out_path))
+        ensure_parent_dir(str(png_out_path))
+        ensure_parent_dir(str(md_out_path))
 
-    print(f"Wrote {OUT_FILE} (contributors={len(contributors_list)}, scanned_repos={scanned})")
+        try:
+            render_wall(
+                display_contributors, 
+                str(html_out_path), 
+                str(png_out_path),
+                str(md_out_path),
+                str(readme_path)
+            )
+        except Exception as e:
+            print(f"Warning: failed to render contributors wall: {e}")
+
+        with open(out_json_path, "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=2)
+    else:
+        # Ensure parent directory exists even if we skip writing
+        ensure_parent_dir(str(out_json_path))
+
+    print(
+        f"Wrote {out_json_path} (contributors={len(contributors_list)}, scanned_repos={scanned})"
+    )
+    
+    # Return whether there were changes
+    return has_changes
 
 
 if __name__ == "__main__":
