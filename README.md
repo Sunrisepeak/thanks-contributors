@@ -2,7 +2,7 @@
 
 > `thanks-contributors`是一个自动统计组织或多个项目贡献者的开源工具
 
-[![Github Action](https://img.shields.io/badge/Github-Action-7FFFD4?logo=github-actions&logoColor=white)](https://github.com/marketplace/actions/thanks-contributors-x)
+[![Github Action](https://img.shields.io/badge/Github-Action-7FFFD4?logo=github-actions&logoColor=white)](https://github.com/marketplace/actions/thanks-contributors)
 [![Github Template](https://img.shields.io/badge/Github-Template-181717?logo=github&logoColor=white)](https://github.com/new?template_name=thanks-contributors&template_owner=Sunrisepeak)
 [![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-32CD32?logo=github&logoColor=white)](https://Sunrisepeak.github.io/thanks-contributors)
@@ -28,7 +28,7 @@
 
 ## 方式二: 使用`GitHub Action`
 
-> 可以通过项目的 [`Marketplace Actions`](https://github.com/marketplace/actions/thanks-contributors-x) 界面选择已经发布的不同版本
+> 可以通过项目的 [`Marketplace Actions`](https://github.com/marketplace/actions/thanks-contributors) 界面选择已经发布的不同版本
 
 **action**
 
