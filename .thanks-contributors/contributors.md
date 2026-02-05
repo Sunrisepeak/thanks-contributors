@@ -24,6 +24,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/FrozenLemonTee">
+            <img src="https://avatars.githubusercontent.com/u/64787592?v=4" width="50;" alt="FrozenLemonTee"/>
+            <br />
+            <sub><b>FrozenLemonTee</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="#">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50;" alt="speak"/>
             <br />
@@ -65,6 +72,8 @@
             <sub><b>Ankali-Aylina</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/ExquisiteCore">
             <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
@@ -72,8 +81,6 @@
             <sub><b>ExquisiteCore</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/13eholder">
             <img src="https://avatars.githubusercontent.com/u/109021191?v=4" width="50;" alt="13eholder"/>
@@ -109,7 +116,6 @@
             <sub><b>zzxzzk115</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
