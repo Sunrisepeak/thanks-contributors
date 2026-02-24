@@ -1,6 +1,6 @@
 {
   "thanks-contributors": "1.0.0",
-  "count": 19,
+  "count": 20,
   "contributors": [
     {
       "name": "13eholder",
@@ -40,6 +40,10 @@
     },
     {
       "name": "lost-42",
+      "email": null
+    },
+    {
+      "name": "MaoApoot",
       "email": null
     },
     {
@@ -349,7 +353,7 @@
       ]
     },
     "mcpp-community/d2mcpp": {
-      "count": 10,
+      "count": 11,
       "contributors": [
         {
           "name": "Sunrisepeak",
@@ -369,6 +373,10 @@
         },
         {
           "name": "Hebown",
+          "email": null
+        },
+        {
+          "name": "MaoApoot",
           "email": null
         },
         {
@@ -393,7 +401,20 @@
         }
       ]
     },
-    "mcpp-community/mcpp-start": {
+    "mcpp-community/mcpp-community": {
+      "count": 2,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "MoYingJi",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/mcpp-bot": {
       "count": 1,
       "contributors": [
         {
@@ -415,15 +436,6 @@
         }
       ]
     },
-    "mcpp-community/members": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
     "mcpp-community/.github": {
       "count": 2,
       "contributors": [
@@ -437,20 +449,16 @@
         }
       ]
     },
-    "mcpp-community/mcpp-community": {
-      "count": 2,
+    "mcpp-community/mcpp-start": {
+      "count": 1,
       "contributors": [
         {
           "name": "Sunrisepeak",
           "email": null
-        },
-        {
-          "name": "MoYingJi",
-          "email": null
         }
       ]
     },
-    "mcpp-community/mcpp-bot": {
+    "mcpp-community/members": {
       "count": 1,
       "contributors": [
         {
@@ -512,10 +520,14 @@
       ]
     },
     "d2learn/d2x-project-template": {
-      "count": 1,
+      "count": 2,
       "contributors": [
         {
           "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "MoYingJi",
           "email": null
         }
       ]
