@@ -10,17 +10,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/MoYingJi">
-            <img src="https://avatars.githubusercontent.com/u/64307394?v=4" width="50;" alt="MoYingJi"/>
-            <br />
-            <sub><b>MoYingJi</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/FrozenLemonTee">
             <img src="https://avatars.githubusercontent.com/u/64787592?v=4" width="50;" alt="FrozenLemonTee"/>
             <br />
             <sub><b>FrozenLemonTee</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/MoYingJi">
+            <img src="https://avatars.githubusercontent.com/u/64307394?v=4" width="50;" alt="MoYingJi"/>
+            <br />
+            <sub><b>MoYingJi</b></sub>
         </a>
     </td>
     <td align="center">
@@ -59,12 +59,21 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/apps/dependabot">
+            <img src="https://avatars.githubusercontent.com/in/29110?v=4" width="50;" alt="dependabot[bot]"/>
+            <br />
+            <sub><b>dependabot[bot]</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/tiansongyu">
             <img src="https://avatars.githubusercontent.com/u/22124581?v=4" width="50;" alt="tiansongyu"/>
             <br />
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/sky-littlestar">
             <img src="https://avatars.githubusercontent.com/u/59217691?v=4" width="50;" alt="sky-littlestar"/>
@@ -72,8 +81,6 @@
             <sub><b>sky-littlestar</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/521xueweihan">
             <img src="https://avatars.githubusercontent.com/u/8255800?v=4" width="50;" alt="521xueweihan"/>
@@ -137,6 +144,8 @@
             <sub><b>jwaiting</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Mq-b">
             <img src="https://avatars.githubusercontent.com/u/97590219?v=4" width="50;" alt="Mq-b"/>
@@ -144,8 +153,6 @@
             <sub><b>Mq-b</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/d2learn-org">
             <img src="https://avatars.githubusercontent.com/u/248744407?v=4" width="50;" alt="d2learn-org"/>
@@ -167,7 +174,6 @@
             <sub><b>zzxzzk115</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
