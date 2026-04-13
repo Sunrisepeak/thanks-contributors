@@ -186,6 +186,13 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/d2learn-org">
+            <img src="https://avatars.githubusercontent.com/u/248744407?v=4" width="50;" alt="d2learn-org"/>
+            <br />
+            <sub><b>d2learn-org</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/521xueweihan">
             <img src="https://avatars.githubusercontent.com/u/8255800?v=4" width="50;" alt="521xueweihan"/>
             <br />
@@ -213,6 +220,8 @@ jobs:
             <sub><b>Hebown</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/MaoApoot">
             <img src="https://avatars.githubusercontent.com/u/77091068?v=4" width="50;" alt="MaoApoot"/>
@@ -220,8 +229,6 @@ jobs:
             <sub><b>MaoApoot</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/13eholder">
             <img src="https://avatars.githubusercontent.com/u/109021191?v=4" width="50;" alt="13eholder"/>
@@ -258,10 +265,10 @@ jobs:
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/d2learn-org">
-            <img src="https://avatars.githubusercontent.com/u/248744407?v=4" width="50;" alt="d2learn-org"/>
+        <a href="https://github.com/ZheFeng7110">
+            <img src="https://avatars.githubusercontent.com/u/194236111?v=4" width="50;" alt="ZheFeng7110"/>
             <br />
-            <sub><b>d2learn-org</b></sub>
+            <sub><b>ZheFeng7110</b></sub>
         </a>
     </td>
     <td align="center">
@@ -271,6 +278,8 @@ jobs:
             <sub><b>Copilot</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/zzxzzk115">
             <img src="https://avatars.githubusercontent.com/u/33739170?v=4" width="50;" alt="zzxzzk115"/>
@@ -278,6 +287,13 @@ jobs:
             <sub><b>zzxzzk115</b></sub>
         </a>
     </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
 </tr>
 </table>
 <!-- thanks-contributors-flag-end -->
