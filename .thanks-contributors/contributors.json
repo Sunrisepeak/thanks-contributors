@@ -1,13 +1,9 @@
 {
   "thanks-contributors": "1.0.0",
-  "count": 25,
+  "count": 21,
   "contributors": [
     {
       "name": "13eholder",
-      "email": null
-    },
-    {
-      "name": "2412322029",
       "email": null
     },
     {
@@ -19,15 +15,7 @@
       "email": null
     },
     {
-      "name": "Copilot",
-      "email": null
-    },
-    {
       "name": "Creativecole",
-      "email": null
-    },
-    {
-      "name": "cursoragent",
       "email": null
     },
     {
@@ -97,13 +85,27 @@
     {
       "name": "ZheFeng7110",
       "email": null
-    },
-    {
-      "name": "zzxzzk115",
-      "email": null
     }
   ],
   "details": {
+    "Sunrisepeak/nodebb-plugin-mermaid": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/thanks-contributors": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
     "Sunrisepeak/Sunrisepeak": {
       "count": 1,
       "contributors": [
@@ -135,25 +137,7 @@
         }
       ]
     },
-    "Sunrisepeak/thanks-contributors": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
     "Sunrisepeak/KHistory": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "Sunrisepeak/.agents": {
       "count": 1,
       "contributors": [
         {
@@ -385,19 +369,6 @@
         }
       ]
     },
-    "mcpp-community/.github": {
-      "count": 2,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "d2learn-org",
-          "email": null
-        }
-      ]
-    },
     "mcpp-community/d2mcpp": {
       "count": 11,
       "contributors": [
@@ -447,6 +418,63 @@
         }
       ]
     },
+    "mcpp-community/mcpp-index": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/templates": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/mcpp-style-ref": {
+      "count": 3,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "FrozenLemonTee",
+          "email": null
+        },
+        {
+          "name": "Creativecole",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/mcpp-start": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/.github": {
+      "count": 2,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "d2learn-org",
+          "email": null
+        }
+      ]
+    },
     "mcpp-community/d2mystl": {
       "count": 4,
       "contributors": [
@@ -481,33 +509,7 @@
         }
       ]
     },
-    "mcpp-community/mcpp-style-ref": {
-      "count": 3,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "FrozenLemonTee",
-          "email": null
-        },
-        {
-          "name": "Creativecole",
-          "email": null
-        }
-      ]
-    },
     "mcpp-community/mcpp-bot": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "mcpp-community/mcpp-start": {
       "count": 1,
       "contributors": [
         {
@@ -534,54 +536,7 @@
         }
       ]
     },
-    "d2learn/xim-pkgindex": {
-      "count": 3,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "MoYingJi",
-          "email": null
-        },
-        {
-          "name": "2412322029",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/xlings": {
-      "count": 4,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "MoYingJi",
-          "email": null
-        },
-        {
-          "name": "Copilot",
-          "email": null
-        },
-        {
-          "name": "zzxzzk115",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/MOGA": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/d2x": {
+    "d2learn/.github": {
       "count": 1,
       "contributors": [
         {
@@ -599,7 +554,16 @@
         }
       ]
     },
-    "d2learn/xpkgindex": {
+    "d2learn/d2x": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "d2learn/MOGA": {
       "count": 1,
       "contributors": [
         {
@@ -621,47 +585,7 @@
         }
       ]
     },
-    "d2learn/xim-pkgindex-skills": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/xim-pkgindex-fromsource": {
-      "count": 2,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "cursoragent",
-          "email": null
-        }
-      ]
-    },
     "d2learn/xlings-docs": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/xim-pkgindex-scode": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/xim-pkgindex-awesome": {
       "count": 1,
       "contributors": [
         {
@@ -680,24 +604,6 @@
       ]
     },
     "d2learn/xlings-project-templates": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/xim-pkgindex-template": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
-    "d2learn/.github": {
       "count": 1,
       "contributors": [
         {
