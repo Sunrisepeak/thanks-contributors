@@ -172,6 +172,13 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/HalfAnElephant">
+            <img src="https://avatars.githubusercontent.com/u/67222274?v=4" width="50;" alt="HalfAnElephant"/>
+            <br />
+            <sub><b>HalfAnElephant</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/521xueweihan">
             <img src="https://avatars.githubusercontent.com/u/8255800?v=4" width="50;" alt="521xueweihan"/>
             <br />
@@ -213,6 +220,8 @@ jobs:
             <sub><b>13eholder</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lost-42">
             <img src="https://avatars.githubusercontent.com/u/202471602?v=4" width="50;" alt="lost-42"/>
@@ -220,8 +229,6 @@ jobs:
             <sub><b>lost-42</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/topshihun">
             <img src="https://avatars.githubusercontent.com/u/89700178?v=4" width="50;" alt="topshihun"/>
@@ -257,7 +264,6 @@ jobs:
             <sub><b>ZheFeng7110</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
 </tr>
