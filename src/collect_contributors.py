@@ -37,6 +37,7 @@ DEFAULT_EXCLUDE_LOGINS = {
     "greenkeeper[bot]", "allcontributors[bot]", "semantic-release-bot",
     "codecov-commenter", "snyk-bot",
 }
+EXCLUDE_IDENTIFIERS = DEFAULT_EXCLUDE_LOGINS | EXTRA_EXCLUDE_LOGINS
 
 if not TOKEN:
     raise SystemExit("Missing env GH_TOKEN")
@@ -118,7 +119,14 @@ def is_bot_login(login: str) -> bool:
 def is_bot_account(c: dict) -> bool:
     if c.get("type") == "Bot":
         return True
-    return is_bot_login(c.get("login"))
+    login = c.get("login")
+    if login and is_bot_login(login):
+        return True
+    # Anonymous entries have no login; the configured exclude list also matches
+    # display names so machine/placeholder accounts without a real user behind
+    # them can be filtered by name (exact, case-insensitive)
+    name = (c.get("name") or "").lower()
+    return bool(name) and name in EXCLUDE_IDENTIFIERS
 
 
 def list_org_public_repos(org: str):

@@ -65,7 +65,7 @@ inputs:
     required: false
     default: "README.md"
   exclude_logins:
-    description: "Extra logins to exclude (appended to built-in bot/agent filter). Space/comma separated."
+    description: "Extra accounts to exclude, appended to the built-in bot/agent filter. Matches login, or display name for anonymous (no-login) entries. Exact, case-insensitive. Space/comma separated."
     required: false
     default: ""
   sort_pinned:
