@@ -1,114 +1,299 @@
 {
-  "thanks-contributors": "1.0.0",
-  "count": 26,
+  "thanks-contributors": "1.1.0",
+  "count": 34,
+  "display": {
+    "sort_pinned": [],
+    "sort_by": "recent_commits",
+    "recent_window_days": 365,
+    "max_display": 50
+  },
   "contributors": [
     {
-      "name": "13eholder",
-      "email": null
-    },
-    {
-      "name": "521xueweihan",
-      "email": null
-    },
-    {
-      "name": "Ankali-Aylina",
-      "email": null
-    },
-    {
-      "name": "Creativecole",
-      "email": null
-    },
-    {
-      "name": "dependabot[bot]",
-      "email": null
-    },
-    {
-      "name": "ExquisiteCore",
-      "email": null
-    },
-    {
-      "name": "FrozenLemonTee",
-      "email": null
-    },
-    {
-      "name": "HalfAnElephant",
-      "email": null
-    },
-    {
-      "name": "Hebown",
-      "email": null
-    },
-    {
-      "name": "jwaiting",
-      "email": null
-    },
-    {
-      "name": "lczllx",
-      "email": null
-    },
-    {
-      "name": "lost-42",
-      "email": null
-    },
-    {
-      "name": "MaoApoot",
-      "email": null
-    },
-    {
-      "name": "MoYingJi",
-      "email": null
-    },
-    {
-      "name": "Mq-b",
-      "email": null
-    },
-    {
-      "name": "sky-littlestar",
-      "email": null
-    },
-    {
-      "name": "speak",
-      "email": "speak@speakmbp.lan"
-    },
-    {
-      "name": "speak-agent",
-      "email": null
-    },
-    {
       "name": "Sunrisepeak",
-      "email": null
-    },
-    {
-      "name": "tiansongyu",
-      "email": null
-    },
-    {
-      "name": "topshihun",
-      "email": null
+      "email": null,
+      "login": "Sunrisepeak",
+      "contributions": 2058,
+      "recent_commits": 1276
     },
     {
       "name": "wellwei",
-      "email": null
+      "email": null,
+      "login": "wellwei",
+      "contributions": 63,
+      "recent_commits": 63
     },
     {
-      "name": "wil1jiang",
-      "email": null
+      "name": "FrozenLemonTee",
+      "email": null,
+      "login": "FrozenLemonTee",
+      "contributions": 16,
+      "recent_commits": 16
     },
     {
-      "name": "xv1rcn",
-      "email": null
-    },
-    {
-      "name": "yizhinailong",
-      "email": null
+      "name": "Ximiaw",
+      "email": null,
+      "login": "Ximiaw",
+      "contributions": 8,
+      "recent_commits": 8
     },
     {
       "name": "ZheFeng7110",
-      "email": null
+      "email": null,
+      "login": "ZheFeng7110",
+      "contributions": 7,
+      "recent_commits": 7
+    },
+    {
+      "name": "julixian",
+      "email": null,
+      "login": "julixian",
+      "contributions": 5,
+      "recent_commits": 5
+    },
+    {
+      "name": "helantianshen",
+      "email": null,
+      "login": "helantianshen",
+      "contributions": 4,
+      "recent_commits": 4
+    },
+    {
+      "name": "lczllx",
+      "email": null,
+      "login": "lczllx",
+      "contributions": 4,
+      "recent_commits": 4
+    },
+    {
+      "name": "duyanta123",
+      "email": null,
+      "login": "duyanta123",
+      "contributions": 3,
+      "recent_commits": 3
+    },
+    {
+      "name": "lildengzi",
+      "email": null,
+      "login": "lildengzi",
+      "contributions": 3,
+      "recent_commits": 3
+    },
+    {
+      "name": "MoYingJi",
+      "email": null,
+      "login": "MoYingJi",
+      "contributions": 3,
+      "recent_commits": 3
+    },
+    {
+      "name": "temotee2103",
+      "email": null,
+      "login": "temotee2103",
+      "contributions": 2,
+      "recent_commits": 2
+    },
+    {
+      "name": "Creativecole",
+      "email": null,
+      "login": "Creativecole",
+      "contributions": 2,
+      "recent_commits": 2
+    },
+    {
+      "name": "Mq-b",
+      "email": null,
+      "login": "Mq-b",
+      "contributions": 2,
+      "recent_commits": 1
+    },
+    {
+      "name": "Zlyraz",
+      "email": null,
+      "login": "Zlyraz",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "Q1hangL",
+      "email": null,
+      "login": "Q1hangL",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "alib8b8",
+      "email": null,
+      "login": "alib8b8",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "ralfsqual",
+      "email": null,
+      "login": "ralfsqual",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "xv1rcn",
+      "email": null,
+      "login": "xv1rcn",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "HalfAnElephant",
+      "email": null,
+      "login": "HalfAnElephant",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "yizhinailong",
+      "email": null,
+      "login": "yizhinailong",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "ExquisiteCore",
+      "email": null,
+      "login": "ExquisiteCore",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "Hebown",
+      "email": null,
+      "login": "Hebown",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "MaoApoot",
+      "email": null,
+      "login": "MaoApoot",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "13eholder",
+      "email": null,
+      "login": "13eholder",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "lost-42",
+      "email": null,
+      "login": "lost-42",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "topshihun",
+      "email": null,
+      "login": "topshihun",
+      "contributions": 1,
+      "recent_commits": 1
+    },
+    {
+      "name": "wil1jiang",
+      "email": null,
+      "login": "wil1jiang",
+      "contributions": 8,
+      "recent_commits": 0
+    },
+    {
+      "name": "speak",
+      "email": "speak@speakmbp.lan",
+      "login": null,
+      "contributions": 4,
+      "recent_commits": 0
+    },
+    {
+      "name": "tiansongyu",
+      "email": null,
+      "login": "tiansongyu",
+      "contributions": 1,
+      "recent_commits": 0
+    },
+    {
+      "name": "sky-littlestar",
+      "email": null,
+      "login": "sky-littlestar",
+      "contributions": 1,
+      "recent_commits": 0
+    },
+    {
+      "name": "521xueweihan",
+      "email": null,
+      "login": "521xueweihan",
+      "contributions": 1,
+      "recent_commits": 0
+    },
+    {
+      "name": "Ankali-Aylina",
+      "email": null,
+      "login": "Ankali-Aylina",
+      "contributions": 1,
+      "recent_commits": 0
+    },
+    {
+      "name": "jwaiting",
+      "email": null,
+      "login": "jwaiting",
+      "contributions": 1,
+      "recent_commits": 0
     }
   ],
   "details": {
-    "Sunrisepeak/Sunrisepeak": {
+    "Sunrisepeak/thanks-contributors": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/mcppls-clangd": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/mcpp-language-server": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/dstruct": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/mcpp-safe": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/mbun": {
       "count": 1,
       "contributors": [
         {
@@ -147,7 +332,7 @@
         }
       ]
     },
-    "Sunrisepeak/mbun": {
+    "Sunrisepeak/mcpp-demos": {
       "count": 1,
       "contributors": [
         {
@@ -156,7 +341,49 @@
         }
       ]
     },
-    "Sunrisepeak/thanks-contributors": {
+    "Sunrisepeak/dsh-index": {
+      "count": 7,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "duyanta123",
+          "email": null
+        },
+        {
+          "name": "temotee2103",
+          "email": null
+        },
+        {
+          "name": "Zlyraz",
+          "email": null
+        },
+        {
+          "name": "Q1hangL",
+          "email": null
+        },
+        {
+          "name": "alib8b8",
+          "email": null
+        },
+        {
+          "name": "ralfsqual",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/HelloWorld": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "Sunrisepeak/Sunrisepeak": {
       "count": 1,
       "contributors": [
         {
@@ -183,15 +410,6 @@
         }
       ]
     },
-    "Sunrisepeak/HelloWorld": {
-      "count": 1,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        }
-      ]
-    },
     "Sunrisepeak/nodebb-plugin-mermaid": {
       "count": 1,
       "contributors": [
@@ -202,19 +420,6 @@
       ]
     },
     "Sunrisepeak/colcon-fish": {
-      "count": 2,
-      "contributors": [
-        {
-          "name": "Sunrisepeak",
-          "email": null
-        },
-        {
-          "name": "dependabot[bot]",
-          "email": null
-        }
-      ]
-    },
-    "Sunrisepeak/dstruct": {
       "count": 1,
       "contributors": [
         {
@@ -416,19 +621,31 @@
         }
       ]
     },
+    "mcpp-community/homebrew-mcpp": {
+      "count": 0,
+      "contributors": []
+    },
     "mcpp-community/mcpp": {
-      "count": 7,
+      "count": 9,
       "contributors": [
         {
           "name": "Sunrisepeak",
           "email": null
         },
         {
-          "name": "speak-agent",
+          "name": "ZheFeng7110",
           "email": null
         },
         {
-          "name": "ZheFeng7110",
+          "name": "julixian",
+          "email": null
+        },
+        {
+          "name": "wellwei",
+          "email": null
+        },
+        {
+          "name": "helantianshen",
           "email": null
         },
         {
@@ -440,7 +657,7 @@
           "email": null
         },
         {
-          "name": "wellwei",
+          "name": "lildengzi",
           "email": null
         },
         {
@@ -502,15 +719,36 @@
         }
       ]
     },
-    "mcpp-community/.github": {
-      "count": 2,
+    "mcpp-community/mcpp-vscode": {
+      "count": 5,
       "contributors": [
         {
-          "name": "Sunrisepeak",
+          "name": "wellwei",
           "email": null
         },
         {
-          "name": "speak-agent",
+          "name": "Ximiaw",
+          "email": null
+        },
+        {
+          "name": "helantianshen",
+          "email": null
+        },
+        {
+          "name": "lildengzi",
+          "email": null
+        },
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/members": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
           "email": null
         }
       ]
@@ -528,6 +766,19 @@
         },
         {
           "name": "Creativecole",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/mcpp-plugins": {
+      "count": 2,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "julixian",
           "email": null
         }
       ]
@@ -553,7 +804,11 @@
         }
       ]
     },
-    "mcpp-community/members": {
+    "mcpp-community/x86_64-linux-musl-gcc": {
+      "count": 0,
+      "contributors": []
+    },
+    "mcpp-community/.github": {
       "count": 1,
       "contributors": [
         {
