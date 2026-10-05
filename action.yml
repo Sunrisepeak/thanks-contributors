@@ -64,6 +64,26 @@ inputs:
     description: "Path to README file (relative to repo root) to update with contributors"
     required: false
     default: "README.md"
+  exclude_logins:
+    description: "Extra logins to exclude (appended to built-in bot/agent filter). Space/comma separated."
+    required: false
+    default: ""
+  sort_pinned:
+    description: "Logins pinned to the top of the contributors wall, in listed order. Space/comma separated."
+    required: false
+    default: ""
+  sort_by:
+    description: "Sort key for non-pinned contributors: recent_commits | contributions | name"
+    required: false
+    default: "recent_commits"
+  recent_window_days:
+    description: "Window in days for the recent_commits sort key"
+    required: false
+    default: "365"
+  max_display:
+    description: "Max contributors rendered in outputs (0 = unlimited)"
+    required: false
+    default: "50"
 
 outputs:
   updated:
@@ -97,6 +117,11 @@ runs:
         PR_TITLE: ${{ inputs.pr_title }}
         BASE_BRANCH: ${{ inputs.base_branch }}
         README_PATH: ${{ inputs.readme_path }}
+        EXCLUDE_LOGINS: ${{ inputs.exclude_logins }}
+        SORT_PINNED: ${{ inputs.sort_pinned }}
+        SORT_BY: ${{ inputs.sort_by }}
+        RECENT_WINDOW_DAYS: ${{ inputs.recent_window_days }}
+        MAX_DISPLAY: ${{ inputs.max_display }}
       run: |
         cd "${{ github.action_path }}"
         python main.py

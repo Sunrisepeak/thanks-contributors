@@ -26,12 +26,59 @@ def _normalize(contributors: List[Dict]) -> List[Dict]:
             {
                 "name": c.get("name") or "Unknown",
                 "email": c.get("email"),
+                "login": c.get("login"),
                 "avatar_url": c.get("avatar_url") or FALLBACK_AVATAR,
                 "html_url": c.get("html_url") or "#",
                 "contributions": int(c.get("contributions") or 0),
+                "recent_commits": int(c.get("recent_commits") or 0),
             }
         )
     return normalized
+
+
+def sort_contributors(
+    contributors: List[Dict],
+    pinned: List[str] = None,
+    sort_by: str = "contributions",
+    max_display: int = 0,
+) -> List[Dict]:
+    """Pinned logins first (in config order), then the rest by sort_by.
+
+    sort_by: recent_commits | contributions | name. max_display > 0 truncates.
+    Deterministic: numeric sorts tie-break so equal counts keep a stable order.
+    """
+    pinned_seq = [(p or "").strip().lower() for p in (pinned or []) if p and p.strip()]
+    pinned_items, rest = [], []
+    matched = set()
+    for c in contributors:
+        login = (c.get("login") or "").lower()
+        if login and login in pinned_seq and login not in matched:
+            pinned_items.append(c)
+            matched.add(login)
+        else:
+            rest.append(c)
+
+    missing = [p for p in pinned_seq if p not in matched]
+    if missing:
+        print(f"⚠️  sort_pinned logins not found in contributors: {', '.join(missing)}")
+
+    if sort_by == "name":
+        rest.sort(key=lambda x: (x.get("name") or "").lower())
+    elif sort_by == "contributions":
+        rest.sort(
+            key=lambda x: (x.get("contributions", 0), x.get("recent_commits", 0)),
+            reverse=True,
+        )
+    else:  # recent_commits
+        rest.sort(
+            key=lambda x: (x.get("recent_commits", 0), x.get("contributions", 0)),
+            reverse=True,
+        )
+
+    result = pinned_items + rest
+    if max_display and max_display > 0:
+        result = result[:max_display]
+    return result
 
 
 def _download_avatar(url: str) -> Image.Image:
@@ -72,9 +119,10 @@ def _make_circular(img: Image.Image, size: int) -> Image.Image:
     return output
 
 
-def render_wall(contributors: List[Dict], html_path: str, png_path: str, md_path: str = None, readme_path: str = None):
+def render_wall(contributors: List[Dict], html_path: str, png_path: str, md_path: str = None, readme_path: str = None,
+                pinned: List[str] = None, sort_by: str = "contributions", max_display: int = 0):
     data = _normalize(contributors)
-    data.sort(key=lambda x: x.get("contributions", 0), reverse=True)
+    data = sort_contributors(data, pinned=pinned, sort_by=sort_by, max_display=max_display)
 
     _render_html(data, html_path)
     if HAS_PIL:

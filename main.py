@@ -38,6 +38,11 @@ os.environ.setdefault("OUTPUT_DIR", ".thanks-contributors")
 os.environ.setdefault("INCLUDE_ANONYMOUS", "true")
 os.environ.setdefault("SKIP_ARCHIVED", "false")
 os.environ.setdefault("PER_REPO_DELAY_MS", "150")
+os.environ.setdefault("SORT_BY", "recent_commits")
+os.environ.setdefault("SORT_PINNED", "")
+os.environ.setdefault("RECENT_WINDOW_DAYS", "365")
+os.environ.setdefault("MAX_DISPLAY", "50")
+os.environ.setdefault("EXCLUDE_LOGINS", "")
 
 def main():
     # Parse command line arguments
