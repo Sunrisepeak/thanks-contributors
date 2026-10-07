@@ -376,6 +376,10 @@ def main():
             seen_repos.add(full)
             repo_pool.append(r)
 
+    # Deterministic scan order: repo listing (sort=updated) varies daily,
+    # which would otherwise shuffle equal-count contributors in the output
+    repo_pool.sort(key=lambda r: r.get("full_name") or "")
+
     # Global aggregation: key -> { login, name, email, html_url, avatar_url, contributions, recent_commits }
     agg = {}
     # Per-repo contributors: full_repo_name -> list of contributors
@@ -524,6 +528,9 @@ def main():
     # Check if contributors have changed before writing/rendering
     display_names = [c.get("name") for c in display_limited]
     has_changes = contributors_changed(out_json_path, contributors_list, display_names, sort_cfg)
+
+    # Sort details by repo name for stable, diff-friendly JSON output
+    repo_details = dict(sorted(repo_details.items()))
 
     out = {
         "thanks-contributors": "1.1.0",

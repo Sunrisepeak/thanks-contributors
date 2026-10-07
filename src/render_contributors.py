@@ -36,6 +36,31 @@ def _normalize(contributors: List[Dict]) -> List[Dict]:
     return normalized
 
 
+def _stable_key_recent(c: Dict) -> tuple:
+    # Descending numeric keys via negation, then deterministic ascending
+    # tie-breaks (name, login/email) so equal-count contributors keep a
+    # stable order across runs regardless of repo scan order
+    return (
+        -int(c.get("recent_commits") or 0),
+        -int(c.get("contributions") or 0),
+        (c.get("name") or "").lower(),
+        c.get("login") or c.get("email") or "",
+    )
+
+
+def _stable_key_contributions(c: Dict) -> tuple:
+    return (
+        -int(c.get("contributions") or 0),
+        -int(c.get("recent_commits") or 0),
+        (c.get("name") or "").lower(),
+        c.get("login") or c.get("email") or "",
+    )
+
+
+def _stable_key_name(c: Dict) -> tuple:
+    return ((c.get("name") or "").lower(), c.get("login") or c.get("email") or "")
+
+
 def sort_contributors(
     contributors: List[Dict],
     pinned: List[str] = None,
@@ -63,17 +88,11 @@ def sort_contributors(
         print(f"⚠️  sort_pinned logins not found in contributors: {', '.join(missing)}")
 
     if sort_by == "name":
-        rest.sort(key=lambda x: (x.get("name") or "").lower())
+        rest.sort(key=_stable_key_name)
     elif sort_by == "contributions":
-        rest.sort(
-            key=lambda x: (x.get("contributions", 0), x.get("recent_commits", 0)),
-            reverse=True,
-        )
+        rest.sort(key=_stable_key_contributions)
     else:  # recent_commits
-        rest.sort(
-            key=lambda x: (x.get("recent_commits", 0), x.get("contributions", 0)),
-            reverse=True,
-        )
+        rest.sort(key=_stable_key_recent)
 
     result = pinned_items + rest
     if max_display and max_display > 0:
