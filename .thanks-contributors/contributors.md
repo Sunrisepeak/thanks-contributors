@@ -10,13 +10,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/wellwei">
-            <img src="https://avatars.githubusercontent.com/u/96378453?v=4" width="50;" alt="wellwei"/>
-            <br />
-            <sub><b>wellwei</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/FrozenLemonTee">
             <img src="https://avatars.githubusercontent.com/u/64787592?v=4" width="50;" alt="FrozenLemonTee"/>
             <br />
@@ -72,8 +65,6 @@
             <sub><b>lildengzi</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/MoYingJi">
             <img src="https://avatars.githubusercontent.com/u/64307394?v=4" width="50;" alt="MoYingJi"/>
@@ -81,6 +72,8 @@
             <sub><b>MoYingJi</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Creativecole">
             <img src="https://avatars.githubusercontent.com/u/15854370?v=4" width="50;" alt="Creativecole"/>
@@ -144,8 +137,6 @@
             <sub><b>lost-42</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/MaoApoot">
             <img src="https://avatars.githubusercontent.com/u/77091068?v=4" width="50;" alt="MaoApoot"/>
@@ -153,6 +144,8 @@
             <sub><b>MaoApoot</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Q1hangL">
             <img src="https://avatars.githubusercontent.com/u/101320235?v=4" width="50;" alt="Q1hangL"/>
@@ -216,8 +209,6 @@
             <sub><b>521xueweihan</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/Ankali-Aylina">
             <img src="https://avatars.githubusercontent.com/u/109135335?v=4" width="50;" alt="Ankali-Aylina"/>
@@ -225,6 +216,8 @@
             <sub><b>Ankali-Aylina</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jwaiting">
             <img src="https://avatars.githubusercontent.com/u/39482149?v=4" width="50;" alt="jwaiting"/>
@@ -246,6 +239,7 @@
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
