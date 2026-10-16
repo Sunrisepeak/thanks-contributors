@@ -110,6 +110,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/dannyward630">
+            <img src="https://avatars.githubusercontent.com/u/71604164?v=4" width="50;" alt="dannyward630"/>
+            <br />
+            <sub><b>dannyward630</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/ExquisiteCore">
             <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
             <br />
@@ -137,6 +144,8 @@
             <sub><b>lost-42</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/MaoApoot">
             <img src="https://avatars.githubusercontent.com/u/77091068?v=4" width="50;" alt="MaoApoot"/>
@@ -144,8 +153,6 @@
             <sub><b>MaoApoot</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/Q1hangL">
             <img src="https://avatars.githubusercontent.com/u/101320235?v=4" width="50;" alt="Q1hangL"/>
@@ -209,6 +216,8 @@
             <sub><b>521xueweihan</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Ankali-Aylina">
             <img src="https://avatars.githubusercontent.com/u/109135335?v=4" width="50;" alt="Ankali-Aylina"/>
@@ -216,8 +225,6 @@
             <sub><b>Ankali-Aylina</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/jwaiting">
             <img src="https://avatars.githubusercontent.com/u/39482149?v=4" width="50;" alt="jwaiting"/>
@@ -239,7 +246,6 @@
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>

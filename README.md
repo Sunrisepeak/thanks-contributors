@@ -214,14 +214,21 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/dannyward630">
+            <img src="https://avatars.githubusercontent.com/u/71604164?v=4" width="50;" alt="dannyward630"/>
+            <br />
+            <sub><b>dannyward630</b></sub>
+        </a>
+    </td>
+</tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/ExquisiteCore">
             <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
             <br />
             <sub><b>ExquisiteCore</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/HalfAnElephant">
             <img src="https://avatars.githubusercontent.com/u/67222274?v=4" width="50;" alt="HalfAnElephant"/>
@@ -271,6 +278,8 @@ jobs:
             <sub><b>topshihun</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/xv1rcn">
             <img src="https://avatars.githubusercontent.com/u/86313530?v=4" width="50;" alt="xv1rcn"/>
@@ -278,8 +287,6 @@ jobs:
             <sub><b>xv1rcn</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/yizhinailong">
             <img src="https://avatars.githubusercontent.com/u/119092375?v=4" width="50;" alt="yizhinailong"/>
@@ -329,6 +336,8 @@ jobs:
             <sub><b>jwaiting</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/sky-littlestar">
             <img src="https://avatars.githubusercontent.com/u/59217691?v=4" width="50;" alt="sky-littlestar"/>
@@ -336,8 +345,6 @@ jobs:
             <sub><b>sky-littlestar</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/tiansongyu">
             <img src="https://avatars.githubusercontent.com/u/22124581?v=4" width="50;" alt="tiansongyu"/>
@@ -345,7 +352,6 @@ jobs:
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
