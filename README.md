@@ -186,6 +186,13 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/lihaoze123">
+            <img src="https://avatars.githubusercontent.com/u/35329574?v=4" width="50;" alt="lihaoze123"/>
+            <br />
+            <sub><b>lihaoze123</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/temotee2103">
             <img src="https://avatars.githubusercontent.com/u/95536550?v=4" width="50;" alt="temotee2103"/>
             <br />
@@ -213,6 +220,8 @@ jobs:
             <sub><b>alib8b8</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/dannyward630">
             <img src="https://avatars.githubusercontent.com/u/71604164?v=4" width="50;" alt="dannyward630"/>
@@ -220,8 +229,6 @@ jobs:
             <sub><b>dannyward630</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/ExquisiteCore">
             <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
@@ -271,6 +278,8 @@ jobs:
             <sub><b>ralfsqual</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/topshihun">
             <img src="https://avatars.githubusercontent.com/u/89700178?v=4" width="50;" alt="topshihun"/>
@@ -278,8 +287,6 @@ jobs:
             <sub><b>topshihun</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/xv1rcn">
             <img src="https://avatars.githubusercontent.com/u/86313530?v=4" width="50;" alt="xv1rcn"/>
@@ -329,6 +336,8 @@ jobs:
             <sub><b>Ankali-Aylina</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jwaiting">
             <img src="https://avatars.githubusercontent.com/u/39482149?v=4" width="50;" alt="jwaiting"/>
@@ -336,8 +345,6 @@ jobs:
             <sub><b>jwaiting</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/sky-littlestar">
             <img src="https://avatars.githubusercontent.com/u/59217691?v=4" width="50;" alt="sky-littlestar"/>
@@ -352,7 +359,6 @@ jobs:
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
