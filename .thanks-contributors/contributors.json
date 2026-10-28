@@ -1,6 +1,6 @@
 {
   "thanks-contributors": "1.1.0",
-  "count": 35,
+  "count": 36,
   "display": {
     "sort_pinned": [],
     "sort_by": "recent_commits",
@@ -12,8 +12,8 @@
       "name": "Sunrisepeak",
       "email": null,
       "login": "Sunrisepeak",
-      "contributions": 2130,
-      "recent_commits": 1342
+      "contributions": 2154,
+      "recent_commits": 1354
     },
     {
       "name": "FrozenLemonTee",
@@ -75,6 +75,13 @@
       "name": "MoYingJi",
       "email": null,
       "login": "MoYingJi",
+      "contributions": 3,
+      "recent_commits": 3
+    },
+    {
+      "name": "xllmapi-official",
+      "email": null,
+      "login": "xllmapi-official",
       "contributions": 3,
       "recent_commits": 3
     },
@@ -520,6 +527,15 @@
         }
       ]
     },
+    "Sunrisepeak/mui": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        }
+      ]
+    },
     "Sunrisepeak/nodebb-plugin-mermaid": {
       "count": 1,
       "contributors": [
@@ -926,6 +942,19 @@
         },
         {
           "name": "MoYingJi",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/mcpp-ide": {
+      "count": 2,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
+          "email": null
+        },
+        {
+          "name": "xllmapi-official",
           "email": null
         }
       ]
