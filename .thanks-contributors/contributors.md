@@ -96,6 +96,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/NopeCharon">
+            <img src="https://avatars.githubusercontent.com/u/115794254?v=4" width="50;" alt="NopeCharon"/>
+            <br />
+            <sub><b>NopeCharon</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/temotee2103">
             <img src="https://avatars.githubusercontent.com/u/95536550?v=4" width="50;" alt="temotee2103"/>
             <br />
@@ -137,6 +144,8 @@
             <sub><b>ExquisiteCore</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/HalfAnElephant">
             <img src="https://avatars.githubusercontent.com/u/67222274?v=4" width="50;" alt="HalfAnElephant"/>
@@ -144,8 +153,6 @@
             <sub><b>HalfAnElephant</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/Hebown">
             <img src="https://avatars.githubusercontent.com/u/151939174?v=4" width="50;" alt="Hebown"/>
@@ -209,6 +216,8 @@
             <sub><b>Zlyraz</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/wil1jiang">
             <img src="https://avatars.githubusercontent.com/u/48466892?v=4" width="50;" alt="wil1jiang"/>
@@ -216,8 +225,6 @@
             <sub><b>wil1jiang</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="#">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50;" alt="speak"/>
@@ -260,7 +267,6 @@
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
     <td></td>
