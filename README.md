@@ -295,6 +295,13 @@ jobs:
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/StellavacuaLuxumbra">
+            <img src="https://avatars.githubusercontent.com/u/288632860?v=4" width="50;" alt="StellavacuaLuxumbra"/>
+            <br />
+            <sub><b>StellavacuaLuxumbra</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/topshihun">
             <img src="https://avatars.githubusercontent.com/u/89700178?v=4" width="50;" alt="topshihun"/>
             <br />
@@ -329,6 +336,8 @@ jobs:
             <sub><b>wil1jiang</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="#">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50;" alt="speak"/>
@@ -336,8 +345,6 @@ jobs:
             <sub><b>speak</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/521xueweihan">
             <img src="https://avatars.githubusercontent.com/u/8255800?v=4" width="50;" alt="521xueweihan"/>
@@ -373,7 +380,6 @@ jobs:
             <sub><b>tiansongyu</b></sub>
         </a>
     </td>
-    <td></td>
     <td></td>
     <td></td>
 </tr>
