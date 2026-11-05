@@ -12,8 +12,8 @@
       "name": "Sunrisepeak",
       "email": null,
       "login": "Sunrisepeak",
-      "contributions": 2175,
-      "recent_commits": 1369
+      "contributions": 2181,
+      "recent_commits": 1367
     },
     {
       "name": "FrozenLemonTee",
@@ -79,6 +79,13 @@
       "recent_commits": 3
     },
     {
+      "name": "NopeCharon",
+      "email": null,
+      "login": "NopeCharon",
+      "contributions": 3,
+      "recent_commits": 3
+    },
+    {
       "name": "xllmapi-official",
       "email": null,
       "login": "xllmapi-official",
@@ -96,13 +103,6 @@
       "name": "lihaoze123",
       "email": null,
       "login": "lihaoze123",
-      "contributions": 2,
-      "recent_commits": 2
-    },
-    {
-      "name": "NopeCharon",
-      "email": null,
-      "login": "NopeCharon",
       "contributions": 2,
       "recent_commits": 2
     },
@@ -902,11 +902,11 @@
           "email": null
         },
         {
-          "name": "helantianshen",
+          "name": "NopeCharon",
           "email": null
         },
         {
-          "name": "NopeCharon",
+          "name": "helantianshen",
           "email": null
         },
         {
