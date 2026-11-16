@@ -12,8 +12,8 @@
       "name": "Sunrisepeak",
       "email": null,
       "login": "Sunrisepeak",
-      "contributions": 2221,
-      "recent_commits": 1402
+      "contributions": 2254,
+      "recent_commits": 1435
     },
     {
       "name": "FrozenLemonTee",
@@ -65,6 +65,13 @@
       "recent_commits": 4
     },
     {
+      "name": "NopeCharon",
+      "email": null,
+      "login": "NopeCharon",
+      "contributions": 4,
+      "recent_commits": 4
+    },
+    {
       "name": "duyanta123",
       "email": null,
       "login": "duyanta123",
@@ -82,13 +89,6 @@
       "name": "MoYingJi",
       "email": null,
       "login": "MoYingJi",
-      "contributions": 3,
-      "recent_commits": 3
-    },
-    {
-      "name": "NopeCharon",
-      "email": null,
-      "login": "NopeCharon",
       "contributions": 3,
       "recent_commits": 3
     },
@@ -414,11 +414,11 @@
       "contributors": [
         {
           "name": "Sunrisepeak",
-          "email": "sunrisepeak@xlings.org"
+          "email": null
         },
         {
           "name": "Sunrisepeak",
-          "email": null
+          "email": "sunrisepeak@xlings.org"
         }
       ]
     },
@@ -1073,6 +1073,15 @@
       "contributors": [
         {
           "name": "lihaoze123",
+          "email": null
+        }
+      ]
+    },
+    "mcpp-community/setup-mcpp": {
+      "count": 1,
+      "contributors": [
+        {
+          "name": "Sunrisepeak",
           "email": null
         }
       ]

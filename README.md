@@ -165,6 +165,13 @@ jobs:
 </tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/NopeCharon">
+            <img src="https://avatars.githubusercontent.com/u/115794254?v=4" width="50;" alt="NopeCharon"/>
+            <br />
+            <sub><b>NopeCharon</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/duyanta123">
             <img src="https://avatars.githubusercontent.com/u/248092604?v=4" width="50;" alt="duyanta123"/>
             <br />
@@ -183,13 +190,6 @@ jobs:
             <img src="https://avatars.githubusercontent.com/u/64307394?v=4" width="50;" alt="MoYingJi"/>
             <br />
             <sub><b>MoYingJi</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/NopeCharon">
-            <img src="https://avatars.githubusercontent.com/u/115794254?v=4" width="50;" alt="NopeCharon"/>
-            <br />
-            <sub><b>NopeCharon</b></sub>
         </a>
     </td>
     <td align="center">
