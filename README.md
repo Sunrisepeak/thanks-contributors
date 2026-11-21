@@ -251,13 +251,6 @@ jobs:
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ExquisiteCore">
-            <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
-            <br />
-            <sub><b>ExquisiteCore</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/HalfAnElephant">
             <img src="https://avatars.githubusercontent.com/u/67222274?v=4" width="50;" alt="HalfAnElephant"/>
             <br />
@@ -278,8 +271,6 @@ jobs:
             <sub><b>lost-42</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="https://github.com/MaoApoot">
             <img src="https://avatars.githubusercontent.com/u/77091068?v=4" width="50;" alt="MaoApoot"/>
@@ -287,6 +278,8 @@ jobs:
             <sub><b>MaoApoot</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Q1hangL">
             <img src="https://avatars.githubusercontent.com/u/101320235?v=4" width="50;" alt="Q1hangL"/>
@@ -336,8 +329,6 @@ jobs:
             <sub><b>wil1jiang</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center">
         <a href="#">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50;" alt="speak"/>
@@ -345,6 +336,8 @@ jobs:
             <sub><b>speak</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center">
         <a href="https://github.com/521xueweihan">
             <img src="https://avatars.githubusercontent.com/u/8255800?v=4" width="50;" alt="521xueweihan"/>
@@ -357,6 +350,13 @@ jobs:
             <img src="https://avatars.githubusercontent.com/u/109135335?v=4" width="50;" alt="Ankali-Aylina"/>
             <br />
             <sub><b>Ankali-Aylina</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ExquisiteCore">
+            <img src="https://avatars.githubusercontent.com/u/59426890?v=4" width="50;" alt="ExquisiteCore"/>
+            <br />
+            <sub><b>ExquisiteCore</b></sub>
         </a>
     </td>
     <td align="center">
